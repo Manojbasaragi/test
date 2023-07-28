@@ -1,0 +1,196 @@
+1.//Method Over loading means the method which having the the same name but differ in there parameters
+
+//ex
+
+class OverLoadDemo
+{
+	
+	static void a()
+	{
+		System.out.println("Invoking a()method in OverLoadDemo");
+	}
+	
+	static void b(int num1, int num2)
+	{
+		System.out.println(num1+num2);
+	}
+}
+
+class OverLoadDemoRunner
+{
+   public static void main(String[] args)
+	{
+		System.out.println("Invoking main in OverLoadDemo");
+                OverLoad.a();
+                OverLoad.b(2,2);
+		
+		
+	}
+}
+
+
+2.Diiferent kind of variables in java programming are:
+  * Static vaeiables.
+  * Non-static or instance Variables.
+  * Local Varialbes.
+
+  1.Static variables:
+  class Variable{
+  static int a=2;
+  static int b =3;
+  public static void main(String[] args)
+  {
+     System.out.println(a+b);
+  }
+}
+
+ 2.Non-static variables.
+  class NonVariable{
+  int num1 = 4;
+  int num2 = 3;
+  
+  }
+
+  class NonVariableRunner{
+   public static void main(String[] args)
+   { 
+     System.out.println(num1+num2);
+   }
+  }
+
+
+  3.Local variables.
+  class LocalVariable{
+    public static void main(String[] args)
+    {
+       String s = "MAnoj";
+       System.out.println(s);
+    }
+  }
+
+
+3.Difference Between Heap and Stack:
+  Heap: It is having so many sub-parts like Meta-space, constant pool, instance pool
+  stack: In this it having stack frame.
+
+  Heap: It stores values and it gives memory for object when in it created.
+  Stack: It stores references from the heap and it executes the methods.
+
+
+4. class ConstructorDemo
+   {
+      ConstructorDemo()
+      {
+        System.out.println("Invoking no-argument Const. in  ConstructorDemo");
+      }
+
+       ConstructorDemo(int age, String name);
+       {
+         System.out.println("Invoking int,String Const. in  ConstructorDemo");
+          System.out.println(age);
+          System.out.println(name);
+
+       }
+   }
+
+
+   class  ConstructorDemoRunner
+   {
+      public static void main(String[] args)
+      {
+        System.out.println("Invoking main in ConstructorDemoRunner");
+        ConstructorDemo constructorDemo = new ConstructorDemo();
+        ConstructorDemo constructorDemo1 = new ConstructorDemo(50,"Manoj");
+       }
+   }
+
+
+5.Instance method Overloading:
+
+ class MethodOver
+ {
+   void abc()
+   {
+     System.out.println("invoking abc() method in MethodOver ");
+   }
+ 
+   void abc(int a)
+   {
+     System.out.println(a);
+   }
+
+ }
+
+ class MethodOverRunner
+ {
+   public static void main(String[] args)
+   {
+     System.out.println("Invoking main in MethodOverRunner");
+     MethodOver ref = new MethodOver();
+     ref.abc();
+     ref(80);
+   }
+ 
+ }
+
+
+6.Static Variables and Static Method:
+
+  class Manoj
+  {
+    static String s = "Talha";
+
+    static void some()
+    {
+      System.out.println("Invoking some() method in Manoj");
+    }
+  }
+
+  class ManojRunner
+  {
+    public static void main(String[] args)
+    {
+      System.out.println("Invoking main in  ManojRunner");
+      System.out.println(Manoj.s);
+      Manoj.some();
+      
+    }
+  }
+
+
+
+7.class ConstructorDemo
+  {
+    String name;
+    int age;
+    ConstructorDemo()
+    {
+     System.out.println("invoking no-arg Const. in ConstructorDemo");
+    }
+
+    ConstructorDemo(String name)
+    {
+      System.out.println("invoking String Const. in ConstructorDemo");
+      this.name = name;
+      System.out.println(name);
+      this.ConstructorDemo()
+    }
+    
+    ConstructorDemo(String name, int age)
+    {
+      System.out.println("invoking String Const. in ConstructorDemo");
+      this.age = age;
+      System.out.println(age);
+      this.ConstructorDemo(name);
+    }
+  }
+
+
+  class ConstructorDemoRunner
+  {
+    public static void main(String[] args)
+    {
+      System.out.println("invoking main in ConstructorDemoRunner");
+       ConstructorDemo ref = new  ConstructorDemo("Rahul",28);
+    }
+  }
